@@ -2,6 +2,7 @@ from ast import arg
 from src.utils.all_utils import read_yaml   , create_directory
 import argparse
 import pandas as pd
+import os
 
 def get_data(config_path):
     config = read_yaml(config_path)
@@ -31,4 +32,4 @@ if __name__ == "__main__":
     args.add_argument("--config" , "-c" , default= "config/config.yaml")
 
     parsed_args = args.parse_args()
-  
+    get_data(config_path=parsed_args.config)
