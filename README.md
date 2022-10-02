@@ -137,5 +137,5 @@ dvc repo
 ```bash
 git add .
 git commit -m "stage 01 added"
-git push origin main
+git push -u origin main
 ```
