@@ -54,7 +54,7 @@ stages:
       md5: 74a0cf6897a4882c012da5761a314117
       size: 466
     - path: src/stage_03_train.py
-      md5: 82c98f96c0680b906c09bb97c83f0546
+      md5: 4feb29e0b4fffb1788cb74dd4777ed7a
       size: 2355
     - path: src/utils/all_utils.py
       md5: c450efb5a981a124d398ab349c9d5ef6
@@ -67,11 +67,11 @@ stages:
         model_params.RandomForestRegressor.oob_score: true
     outs:
     - path: artifacts/model_dir/Elastic.model
-      md5: 667f423499d13476108d9c5852ca5f12
-      size: 699
+      md5: 8e1a9aa8c30066f3d3243ba30006ade7
+      size: 1369
     - path: artifacts/model_dir/RF.model
-      md5: 667f423499d13476108d9c5852ca5f12
-      size: 699
+      md5: 389a7001ecbb9bb195cce07b980057ed
+      size: 3063955
   eval_data:
     cmd: python src/stage_04_eval.py --config=config/config.yaml
     deps:
@@ -82,8 +82,8 @@ stages:
       md5: 74a0cf6897a4882c012da5761a314117
       size: 466
     - path: src/stage_04_eval.py
-      md5: 9a045ca28ab1e7c7a41d13b03eac38f2
-      size: 2948
+      md5: 35650814f6be95ed8cc258ac129b5814
+      size: 2730
     - path: src/utils/all_utils.py
       md5: c450efb5a981a124d398ab349c9d5ef6
       size: 725
@@ -92,5 +92,5 @@ stages:
       md5: 731e19375d063697bd6f5d58d054c2d2
       size: 99
     - path: artifacts/reports_dir/rf_scores.json
-      md5: 731e19375d063697bd6f5d58d054c2d2
-      size: 99
+      md5: b41bafaff83a9f6560f936ba5cd1daf1
+      size: 90

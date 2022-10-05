@@ -55,19 +55,12 @@ def eval(config_path):
     ## Random Forest
     
 
-    model_dir = config["artifacts"]["model_data_dir"]
     model_file = config["artifacts"]["random_forest"]
     model_path = os.path.join(artifacts_dir ,model_dir , model_file)
     rf = joblib.load(model_path)
     predicted_value = rf.predict(test_x)
     rmse, mae, r2 = evaluate_metrics(test_y, predicted_value)
-
-    scores_dir = config["artifacts"]["reports_dir"]
     scores_filename = config["artifacts"]["rf_scores"]
-
-    scores_dir_path = os.path.join(artifacts_dir, scores_dir)
-    create_directory([scores_dir_path])
-
     scores_filepath = os.path.join(scores_dir_path, scores_filename)
 
     scores = {

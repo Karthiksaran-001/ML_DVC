@@ -47,7 +47,7 @@ def train(config_path , params_path):
     model_dir = os.path.join(artifacts_dir , model_dir)
     create_directory([model_dir])
     model_path = os.path.join(model_dir , model_file)
-    joblib.dump(lr , model_path)
+    joblib.dump(rf , model_path)
 
     print("Model Saved Successfully")
 
