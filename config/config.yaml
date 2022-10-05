@@ -10,3 +10,6 @@ artifacts:
    model_data_dir: model_dir
    elastic_file: Elastic.model
    random_forest: RF.model
+   reports_dir: reports_dir
+   lr_scores: lr_scores.json 
+   rf_scores: rf_scores.json

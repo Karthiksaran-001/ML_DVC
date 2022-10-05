@@ -1,6 +1,4 @@
 stages:
-  always_run:
-      cmd: python Demo\test.py
   load_data:
     cmd: python src/stage_01_load_save.py --config=config/config.yaml
     deps:
@@ -38,4 +36,15 @@ stages:
     outs:
       - artifacts/model_dir/Elastic.model
       - artifacts/model_dir/RF.model
+  eval_data:
+    cmd: python src/stage_04_eval.py --config=config/config.yaml
+    deps:
+      - src/stage_04_eval.py
+      - src/utils/all_utils.py
+      - config/config.yaml
+      - artifacts/split_data_dir/test.csv
+    outs:
+      - artifacts/reports_dir/lr_scores.json
+      - artifacts/reports_dir/rf_scores.json
+
    
