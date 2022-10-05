@@ -7,3 +7,6 @@ artifacts:
    split_data_dir: split_data_dir
    train: train.csv
    test: test.csv
+   model_data_dir: model_dir
+   elastic_file: Elastic.model
+   random_forest: RF.model
