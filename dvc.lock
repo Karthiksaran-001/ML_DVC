@@ -75,6 +75,12 @@ stages:
   eval_data:
     cmd: python src/stage_04_eval.py --config=config/config.yaml
     deps:
+    - path: artifacts/model_dir/Elastic.model
+      md5: 8e1a9aa8c30066f3d3243ba30006ade7
+      size: 1369
+    - path: artifacts/model_dir/RF.model
+      md5: 389a7001ecbb9bb195cce07b980057ed
+      size: 3063955
     - path: artifacts/split_data_dir/test.csv
       md5: b0a1dbeb7586d88a8be61abde64f9114
       size: 18832

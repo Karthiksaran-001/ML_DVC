@@ -43,6 +43,8 @@ stages:
       - src/utils/all_utils.py
       - config/config.yaml
       - artifacts/split_data_dir/test.csv
+      - artifacts/model_dir/Elastic.model
+      - artifacts/model_dir/RF.model
     outs:
       - artifacts/reports_dir/lr_scores.json
       - artifacts/reports_dir/rf_scores.json
